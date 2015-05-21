@@ -20,6 +20,7 @@ class pokerStringType//定义存放一个牌组的信息的类
 		
 		void addPoker(char *colorString,int point);//添加一张牌,并保证牌组点数为升序
 		void addPoker(int color,int point);//同为添加，但是花色直接为编号
+		int getTot();//获得牌组的牌的张数
 		int calcValue();/*计算这组牌能组成的最好的牌的价值
 						  8 同花顺
 						  7 四条
@@ -151,6 +152,10 @@ int pokerStringType::calcValue()
 		return 1;
 	}
 	return 0;
+}
+int pokerStringType::getTot()
+{
+	return tot;
 }
 void pokerStringType::display()
 {
